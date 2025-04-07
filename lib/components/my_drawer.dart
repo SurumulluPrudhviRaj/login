@@ -12,7 +12,6 @@ class MyDrawer extends StatelessWidget {
       (route) => false,
     );
   }
-  
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +25,11 @@ class MyDrawer extends StatelessWidget {
               alignment: Alignment.centerLeft,
               child: Text(
                 "MENU",
-                style: TextStyle(color: Colors.white, fontSize: 24),
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ),
@@ -34,7 +37,6 @@ class MyDrawer extends StatelessWidget {
           // 📦 Grouped Menu Items
           Expanded(
             child: Column(
-
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 25.0),
@@ -45,7 +47,7 @@ class MyDrawer extends StatelessWidget {
                     ),
                     title: const Text("H O M E"),
                     onTap: () {
-                       Navigator.pop(context);
+                      Navigator.pop(context);
                       Navigator.pushNamed(context, '/home_page');
                     },
                   ),
